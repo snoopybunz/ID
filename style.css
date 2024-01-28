@@ -20,11 +20,14 @@ nav a:hover {
     color: #F8B3BE;
 }
 
+/* ================ HOME ================ */
 .search-filter-bar {
     background: rgba (0,0,0,0.3)
 }
 body { 
     background-color: #FFF7F8;
+    font-family:'Arima Madurai';
+    color:#4D423A;
 }
 
 .logo-container {
@@ -122,7 +125,7 @@ body {
     text-align: center;
     color:#4D423A;
     font-size: 100px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .collections-container {
@@ -143,9 +146,10 @@ body {
     width: 90%;
     height: auto;
     object-fit: cover;
+    opacity: 0.7;
     border-radius: 10px;
-    margin: 10px;
-    margin-left: 20px;
+    margin: 25px;
+    margin-left: 30px;
 }
 
 .collections-container .bs-text,
@@ -157,7 +161,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #4D423A;
     font-size: 50px;
     font-weight: bold;
 }
@@ -171,7 +174,7 @@ body {
 .productImg {
     width: 25%;
     height: auto;
-    border-radius: 8px;
-    margin: 0 70px;
+    border-radius: 5px;
+    margin: 0 60px;
     position: relative;
 }
