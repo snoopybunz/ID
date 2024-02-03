@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/79cdab9c68.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="favourites.html">Favourites</a>
+        <a href="rewards.html">Rewards</a>
+    </div>
+    <div class="carousel">
+        <img class="carousel-image" src="images/candleGang.png" alt="Image 1">
+        <img class="carousel-image" src="images/candlebear.png" alt="Image 2">
+        <img class="carousel-image" src="images/floral.png" alt="Image 3">
+        <img class="carousel-image" src="images/scents.png" alt="Image 3">
+    </div>
+
+
+    <div class="dots-container">
+        <div class="dot-holder">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="product-info-new">
+        <div class="product-details-new">
+            <h2 class="product-name-new">Product Name</h2>
+            <p class="product-cost-new">Product Cost</p>
+            <p class="product-description-new">Product Description</p>
+        </div>
+        <div class="add-to-cart-new">
+            <button class="cart-button-new">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const dots = document.querySelectorAll('.dot');
+
+        function changeImage() {
+            images[index].style.display = 'none';
+            dots[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].style.display = 'block';
+            dots[index].classList.add('active');
+        }
+
+        dots[0].classList.add('active');
+
+        setInterval(changeImage, 3000);
+    </script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/79cdab9c68.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <h1 style="margin-left: 95px;">MY CART</h1>
+    
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+</body>
+
+</html>
